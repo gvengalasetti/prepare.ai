@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Prepare.AI",
+  "version": "1.0",
+  "description": "AI-powered meeting preparation assistant with calendar integration",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://localhost:5000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Prepare.AI - Meeting Assistant"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

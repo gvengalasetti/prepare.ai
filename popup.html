@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="rounded-popup">
+<head>
+    <meta charset="utf-8">
+    <title>Prepare.AI - Meeting Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="rounded-popup">
+    <div class="popup-wrapper">
+        <div class="container">
+        <div class="header">
+            <div class="theme-toggle">
+                <button id="themeToggle" class="theme-btn">
+                    <i data-lucide="sun" id="themeIcon"></i>
+                </button>
+            </div>
+            <h1>
+                <i data-lucide="brain" class="title-icon"></i>
+                Prepare.AI
+            </h1>
+            <p>Get ready for your meetings with AI-powered research</p>
+        </div>
+        
+        <!-- Calendar Widget -->
+        <div class="calendar-container">
+            <div class="calendar-nav">
+                <button id="prevMonth" class="nav-btn">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <h2 id="currentMonth"></h2>
+                <button id="nextMonth" class="nav-btn">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </div>
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- Calendar days will be generated here -->
+            </div>
+        </div>
+        
+        <!-- Selected Date Info -->
+        <div class="meetings-section">
+            <div class="selected-date" id="selectedDate">
+                <h3>
+                    <i data-lucide="calendar-check"></i>
+                    Select a date to view meetings
+                </h3>
+            </div>
+            
+            <!-- Meetings List -->
+            <div class="meetings-container" id="meetingsContainer">
+                <!-- Meetings will be displayed here -->
+            </div>
+        </div>
+        
+        <!-- Meeting Research Details -->
+        <div class="research-container" id="researchContainer" style="display: none;">
+            <div class="research-content" id="researchContent">
+                <button id="closeResearch" class="close-btn">
+                    <i data-lucide="x"></i>
+                </button>
+                <!-- Research details will be displayed here -->
+            </div>
+        </div>
+        
+        <!-- Loading indicator -->
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading meetings...</p>
+        </div>
+        
+        <!-- Status messages -->
+        <div class="status" id="status"></div>
+        </div>
+    </div>
+    
+    <!-- Lucide Icons (local copy for MV3) -->
+    <script src="lucide.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
